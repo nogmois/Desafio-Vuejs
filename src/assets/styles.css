@@ -1,0 +1,254 @@
+body {
+  background-color: #e5e5e5;
+  padding: 16px;
+  }
+  
+  /* ProjectDashboard */
+
+  .mdi-menu {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+  }
+  
+  
+  .new-project-button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f0f0f0; /* Sobrescreve a cor primária se necessário */
+  }
+  
+  .title-custom {
+    text-align: center; /* Centraliza o título se desejado */
+    margin-bottom: 20px; /* Espaço entre o título e a lista */
+  }
+  
+  .card-custom {
+    max-width: 600px; /* Largura máxima do card */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Habilita o display flex */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    gap: 10px; /* Espaço entre cada task-card */
+  }
+  
+  .card-custom-project {
+    height: 99px;
+    width: 208px;
+    padding: 16px;
+    display: flex; /* Habilita o display flex */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    gap: 10px; /* Espaço entre cada task-card */
+    background-color: white;
+    margin: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -1px rgba(0,0,0,0.07);
+    border: 1px solid #ccc; /* Adiciona uma borda sólida cinza clara */
+  }
+  
+  .layout-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .projects, .tasks, .forms {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .projects {
+    max-width: 300px;
+    background-color: #fff;
+    padding: 16px;
+  }
+  
+  .tasks {
+    max-width: 100%; /* Ajusta a largura máxima para 100% */
+    display: flex; /* Habilita flexbox */
+    flex-wrap: wrap; /* Permite que os itens se ajustem conforme necessário */
+  }
+  
+  .card-custom {
+    width: 100%; /* Faz com que cada cartão ocupe toda a largura da coluna */
+    margin-bottom: 20px; /* Adiciona um espaço entre os cartões */
+    padding: 14px;
+  }
+  
+  .forms {
+    max-width: 300px;
+  }
+  
+  .mt-4 {
+    margin-top: 16px;
+  }
+  
+  @media (max-width: 900px) {
+    .forms {
+      max-width: 100%;
+    }
+  
+    .mt-md-0 {
+      margin-top: 0 !important;
+    }
+    .mdi-menu {
+      display: block;
+    }
+  }
+  
+  
+  @media (max-width: 780px) {
+    .layout-wrapper {
+      flex-direction: column;
+    }
+  
+    .projects, .tasks, .forms {
+      max-width: 100%;
+      margin: 10px 0; /* Adiciona um espaço entre as seções em telas pequenas */
+    }
+  
+    .new-project-button, .card-custom {
+      width: 100%;
+    }
+
+    .mdi-menu {
+      display: block;
+    }
+  }
+  
+
+  /*TaskCard*/
+
+  .task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    margin-bottom: 5px; 
+  }
+  
+  .subtitle {
+    margin-top: 0; 
+  }
+
+/* Project List */
+
+.project-list {
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o padding padrão */
+  
+}
+
+.list-item {
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Assegura que o item usa a largura total */
+  text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+.project-info {
+  display: flex;
+  width: 100%; /* Garante que o contêiner interno ocupe todo o espaço horizontal */
+  justify-content: space-between; /* Espaça os elementos de cada lado */
+}
+
+.project-title {
+  flex-grow: 1; /* Permite que o título ocupe o espaço máximo disponível */
+}
+
+.task-count {
+  margin-left: 20px; /* Espaço entre o título e a contagem de tarefas */
+  white-space: nowrap; /* Evita que a contagem de tarefas quebre em várias linhas */
+}
+
+.list-item:hover {
+  background-color: #f5f5f5; /* Cor ao passar o mouse */
+}
+
+/* New Project Form */
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* ou outra largura conforme necessário */
+  max-width: 600px; /* limite a largura máxima do formulário se necessário */
+  margin: 20px auto; /* centraliza o contêiner na página */
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field, .textarea-field {
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* garante que os campos preencham o contêiner */
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  color: white;
+  background-color: #1976D2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #1565C0;
+}
+
+/* New Tasks Form */
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* ou outra largura conforme necessário */
+  max-width: 600px; /* limite a largura máxima do formulário se necessário */
+  margin: 20px auto; /* centraliza o contêiner na página */
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field, .textarea-field {
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* garante que os campos preencham o contêiner */
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  color: white;
+  background-color: #1976D2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #1565C0;
+}
